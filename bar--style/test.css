@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black
+}
+
+
+#side-nav {
+  width: 80px;
+  height: 100vh;
+  padding: 28px;
+  background-color: blueviolet;
+  transition: 0.3s;
+  align-items: center;
+}
+
+
+.nav-links span {
+  position: absolute;
+  left: -80px;
+}
+
+ul {
+  list-style: none;
+}
+
+#side-nav:hover {
+  animation: bar 1s;
+}
+
+@keyframes bar {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 250px;
+  }
+}
