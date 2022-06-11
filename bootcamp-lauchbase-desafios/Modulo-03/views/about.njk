@@ -1,0 +1,28 @@
+{% extends 'layout.njk' %} {% block head %}
+<link rel="stylesheet" href="./styles/pagina-descricao.css" />
+
+<title>Quem somos?</title>
+{% endblock %} {% block content %}
+<div class="container">
+  <img
+    src="{{about.avatar_url}}"
+    alt="{{about.name}}"
+  />
+  <h1>{{about.name}}</h1>
+  <p>
+    {{about.description}}
+  </p>
+
+  <ul>
+    {% for tec in about.tecs %}
+    <li>{{tec}}</li>
+    {% endfor %}
+  </ul>
+
+  <div class="links">
+    {% for link in about.links %}
+    <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

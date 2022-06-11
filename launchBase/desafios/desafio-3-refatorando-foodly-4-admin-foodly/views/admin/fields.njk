@@ -1,0 +1,90 @@
+<div class="item">
+      <h3>Imagem da receita</h3>
+      <div>
+        <input 
+          type="url" 
+          name="image" 
+          placeholder="https://"
+          value="{{ recipe.image }}"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>Nome da Receita</h3>
+      <div>
+        <input 
+          type="text" 
+          name="title"
+          value="{{ recipe.title }}"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>Autor(a)</h3>
+      <div>
+        <input 
+          type="text" 
+          name="author"
+          value="{{ recipe.author }}"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+
+    <div class="item ingredients">
+      <h3>Ingredientes</h3>
+        <div class="ingredient">
+          {% if recipe.ingredients %}
+            {% for ingredient in recipe.ingredients %}
+              <input 
+              type="text" 
+              name="ingredients[]" 
+              value="{{ ingredient }}"/>
+            {% endfor %}
+          {% else %}
+            <input 
+              type="text" 
+              name="ingredients[]" 
+              autocomplete="off"
+            />
+          {% endif %}
+          
+        </div>
+    </div>
+    <button type="button" class="add-ingredient">Adicionar ingrediente</button>
+
+    <div class="item preparations">
+      <h3>Modo de preparo</h3>
+        <div class="preparation">
+          {% if recipe.preparation %}
+            {% for prepare in recipe.preparation %}
+              <input 
+                type="text" 
+                name="preparation[]" 
+                value="{{ prepare }}"
+              >
+             {% endfor %}
+             {% else %}
+             <input 
+                type="text" 
+                name="preparation[]" 
+                autocomplete="off"
+              >
+          {% endif %}
+      
+        </div>
+    </div>
+    <button class="add-preparation" type="button">Adicionar novo passo</button>
+
+    <div class="item">
+      <h3>Informações adicionais</h3>
+      <div>
+        <textarea 
+          name="information"
+        >{{ recipe.information }}</textarea>
+      </div>
+    </div>

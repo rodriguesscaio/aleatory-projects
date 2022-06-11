@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+#master, .div-header {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #000;
+  
+  display: flex;
+  align-items: center;  
+}
+
+header img {
+  width: 91px;
+  height: 27px;
+
+}
+
+/* === INDEX PAGE === */
+.title-link {
+  width: 100%;
+  margin: 55px 0 24px 0;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-link h1 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.title-link a,
+.button-form,
+.button-delete {
+  text-decoration: none;
+  background-color: #7159c1;
+  width: 139px;
+  height: 37px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFF;
+  transition: 400ms;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button {
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.title-link a:hover {
+  opacity: 0.9;
+}
+
+.cards {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}
+
+.card {
+  width: 100%;
+  display: flex;
+}
+
+.card img {
+  width: 172px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #111111;
+  font-weight: normal;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+.info-card a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-card a:hover {
+  opacity: 0.8;
+}
+
+/* === PAGE SHOW === */
+
+.recipe-show {
+  width: 100%;
+}
+
+.recipe-show img {
+  width: 940px;
+  height: 280px;
+  border-radius: 15px;
+
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  margin-top: 50px;
+  font-size: 36px;
+  color: #111111;
+  font-weight: 550;
+}
+
+.title p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #777777;
+}
+
+.recipe-show h3 {
+  margin: 20px auto;
+  color: #111111;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.ingredient p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444;
+}
+
+.lastingredient {
+  margin-bottom: 50px;
+}
+
+/* === PAGE CREATE === */
+
+.form-recipe {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+}
+
+.item h3 {
+  font-size: 16px;
+  line-height: 26px;
+  color: #111111;
+}
+
+.form-recipe div + div h3  {
+  margin-top: 30px;
+}
+
+.item div input {
+  width: 100%;
+  outline-style: none;
+
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  background: #FFFFFF;
+  padding: 8px;
+  margin: 10px auto;
+  font-size: 18px;
+}
+
+textarea {
+  width: 100%;
+  height: 257px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  resize: vertical;
+  outline-style: none;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: initial;
+}
+
+button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6568C3;
+  background-color: transparent;
+  outline-style: none;
+  width: 180px;
+  text-align: center;
+  margin-bottom: 25px;
+
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.item button:hover {
+  color: #7159c1;
+}
+
+.button-form {
+  font-weight: 600;
+  cursor: pointer;
+  outline-style: none;
+}
+
+/* === PAGE EDIT === */
+
+.button-delete {
+  background-color: red;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+
+  transition: 400ms;
+}
+
+.button-delete:hover {
+  opacity: 0.8;
+}
+
+.form-delete {
+  display: inline;
+  position: absolute;
+  right: 650px;
+  top: 135px;
+  cursor: pointer;
+  z-index: 2;
+}
