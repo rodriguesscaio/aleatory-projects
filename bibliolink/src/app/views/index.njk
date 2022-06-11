@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>BiblioLink</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/assets/livro.svg" alt="Logo do site">
+      <p>BiblioLink</p>
+    </div>
+
+    <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/books">Livros</a></li>
+      <li><a href="/links">Pessoas</a></li>
+      <li><a href="/about">Sobre</a></li>
+      <li><a href="partnes">Parceiros</a></li>
+    </ul>
+    <div class="input-header">
+      <input type="text" name="search" placeholder="O que quer pesquisar ?">
+    </div>
+    <div class="button">
+      <a href="/signin">Entrar</a>
+    </div>
+  </header>
+
+  <div class="content-main">
+    <main>
+      <h1>Seja bem-vindo(a) à <span>BiblioLink!</span></h1>
+      <section style="background: url(https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60/500x500) no-repeat center center / cover"></section>
+
+      <p>Tem interesse em doar/colaborar? <a href="#">SAIBA MAIS</a></p>
+    </main>
+
+    <div class="form-register">
+      <form action="/profile" method="POST">
+        <div class="item">
+          <div>Nome</div>
+          <div>
+            <input type="text" name="name" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="item">
+          <div>E-mail</div>
+          <div>
+            <input type="email" name="email" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="item">
+          <div>Senha</div>
+          <div>
+            <input type="password" name="password">
+          </div>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+          <a href="#">Já tenho cadastro!</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Com a <span>BiblioLink</span></h3>
+      <p>encontre pessoas que <br>queiram compartilhar livros<br>com VOCÊ!</p>
+    </div>
+
+  <div class="card">
+    <h3>Crie conexões</h3>
+    <p>com o intuito de expandir <br> e repensar a maneira <br> de compartilhar livros</p>
+  </div>
+
+  <div class="card">
+    <h3>O nosso FOCO</h3>
+    <p>são pessoas pretas que <br> precisam de livros no início <br> meio e fim da graduação!</p>
+  </div>
+  </div>
+</body>
+</html>
