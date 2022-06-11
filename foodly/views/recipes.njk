@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Receitas</title>
+</head>
+<body>
+  <div class="contents">
+    <header>
+      <img src="/assets/logo.png" alt="Foodly">
+      
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">Receitas</a></li>
+        <li><a href="/about">Sobre</a></li>
+        <li><a class="admin" href="/admin/recipes">Administrar</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+    <div class="cards">
+
+        {% for recipe in recipes %}
+        <div class="card" id="{{ recipe.id }}">
+          <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+          <div class="card_info">
+            <h4>{{ recipe.title }}</h4>
+            <p>{{ recipe.author }}</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>Todos os direitos reservados, receitas Foodly</p>
+    </footer>
+
+    <script src="/index.js"></script>
+</body>
+</html>

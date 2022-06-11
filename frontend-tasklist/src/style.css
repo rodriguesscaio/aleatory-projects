@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  background-color: #fffafae3;
+}
+
+.image {
+  width: 50%;
+  height: 100%;
+
+  background-image: url("/src/assets/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  background-color: #62507a;
+}
+
+.content {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d5ecd5;
+}
+
+.container .logo {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.container .logo span {
+  font-family: "Architects Daughter", cursive;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #6538a8;
+}
+
+.container form {
+  width: 50%;
+
+  padding: 32px;
+  border: 2px solid #09b909;
+  border-radius: 4px;
+}
+
+.container form h1 {
+  width: 250px;
+  color: #0d7e0d;
+  font-size: 26px;
+  line-height: 38px;
+  margin: 8px 0;
+}
+
+.container input,
+button {
+  width: 100%;
+  height: 40px;
+  margin: 16px auto;
+  border-radius: 4px;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.container input {
+  border-bottom: 1px solid #6538a8aa;
+  padding-left: 12px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.container input::placeholder {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.548);
+}
+
+.container form button {
+  background-color: #6538a8;
+  font-size: 18px;
+  margin-top: 34px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+
+  transition: 0.9ms;
+}
+
+.container form button:hover {
+  background-color: #198619;
+}
